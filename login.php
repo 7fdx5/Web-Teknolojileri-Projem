@@ -8,7 +8,7 @@
 </head>
 <body>
     <center>
-        <form   method="$_POST" ></form>
+        <form   method="$_POST" >
 <table>
 <tr>
 <th>Kullancı Ad </th>
@@ -20,7 +20,7 @@
 <th><input type="password" name="pass" required></th>
 <tr>
 <th>
-<input type="submit" value="Gonder" name="submit">
+<input type="submit" value="Gonder" name="submit" >
 </th>
 </tr>
 
@@ -32,13 +32,14 @@
 
 
 </table>
+</form>
 </center>
 <?php  
 if(isset($_POST["submit"]))
 {
 $user=$_POST["user"]; 
 $pass=$_POST["pass"];
-if(($user=="b201210573@sakarya,edu.tr" && $pass=="b201210573") )
+if(($user=="b201210573@sakarya.edu.tr" && $pass=="b201210573") )
 {
 echo "başarı yapıldı";
 
