@@ -19,8 +19,8 @@ html {
 }
 
 h1 {
-    font-size: 5.65rem;
-    margin: 1.9rem;
+    font-size: 4.65rem;
+    margin: 1rem;
 }
 
 h2 {
@@ -132,4 +132,15 @@ p {
 .carousel-inner img {
     width: 450px;
     height: 450px;
+}
+
+.th {
+    background-color: var(--bgcolor-1);
+    color: var(--lightcolor);
+    font-size: 2.4rem;
+    padding: var(--padding);
+}
+
+.s {
+    color: var(--primarycolor);
 }
