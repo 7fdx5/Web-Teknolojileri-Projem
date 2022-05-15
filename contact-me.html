@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Web Teknolojisi Projem">
+    <title> WEB TEKNOLOJİLERİ</title>
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="icon" href="icons/icon1.png">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,400;1,500;1,600&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body class="home">
+    <section>
+        <nav class="navbar navbar-expand-md ">
+            <h2>Web <span>Teknoloji</span> </h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="general-information.html">General Information</a></li>
+                <li><a href="contact-me.html">Contact Me</a></li>
+                <li><a href="about-me.html"> About Me</a></li>
+                <li><a href="my-city.html"> My City</a></li>
+            </ul>
+
+
+        </nav>
+
+
+
+
+    </section>
+
+
+
+    <h1>Bilgileri Giriniz</h1>
+
+    <br>
+    <hr>
+
+    <form class="bi" name="form" onsubmit="return(Dogrulama())" action="kisi.php" method="post">
+        <table>
+            <tr>
+                <th> Ad Soyad </th>
+
+            </tr>
+            <tr>
+                <th> <input type="text" name="text" id="txt1"> </th>
+            </tr>
+            <tr>
+                <th> E-post </th>
+
+
+            </tr>
+            <tr>
+                <th> <input type="email" name="email" id="email"> </th>
+            </tr>
+            <tr>
+                <th> Şifre </th>
+
+
+            </tr>
+            <tr>
+                <th> <input type="password" name="password" id="pas"> </th>
+            </tr>
+
+
+            <tr>
+
+                <th>Resminiz</th>
+
+            </tr>
+            <tr>
+                <th><input type="file" name="file" id="fil"></th>
+            </tr>
+            <tr>
+                <th>Cinsyet</th>
+
+            </tr>
+            <tr>
+
+            </tr>
+            <tr>
+                <td><input type="radio" name="radio" id="rdo">Erkek</td>
+
+            </tr>
+            <tr>
+                <td><input type="radio" name="radio" id="rdo">Kız</td>
+            </tr>
+            <tr>
+                <th>Sınıfınız</th>
+
+
+            </tr>
+            <tr>
+                <td><input type="radio" name="sinif" id="snf">Birinci</td>
+
+            </tr>
+            <td><input type="radio" name="sinif" id="snf">İkinci</td>
+
+            <tr>
+                <td><input type="radio" name="sinif" id="snf">Üçüncü</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="sinif" id="snf">Dördüncü</td>
+            </tr>
+            <th>Şehrinizi seçin</th>
+
+            </tr>
+            <tr>
+                <th> <select name="select" id="select">
+  <option value="-1">Seç</option>
+  <option value="1">Sakarya Üniveristesi</option>
+  <option value="1">Sakarya Uyg. Bil. Üniversitesi</option>
+  <option value="1">Kocaeli Üniversitesi</option>
+  <option value="1">İstanbul Teknik Üniversitesi</option>
+  
+</select></th>
+            </tr>
+            <tr>
+                <th>
+                    Dileriniz
+                </th>
+
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="dil" id="ch">Turkçe</td>
+            </tr>
+            <tr class="diler">
+                <td><input type="checkbox" name="dil" id="ch">Inglizce</td>
+            </tr>
+
+            <tr>
+                <td><input type="checkbox" name="dil" id="ch">Almanca</td>
+            </tr>
+
+            <tr>
+                <td><input type="checkbox" name="dil" id="ch">Arapça</td>
+            </tr>
+            <tr>
+
+                <th> <textarea name="" cols="30" rows="6"> Mesajınız  ....</textarea></th>
+            </tr>
+            <tr>
+
+                <th><input type="reset" name="reset" value="Temizle"> <input type="submit" name="subimt" value="Günder"></th>
+
+
+            </tr>
+        </table>
+    </form>
+
+
+    <br> <br>
+    <script>
+        function Dogrulama() {
+            var A = false;
+            var B = document.form.dil;
+            for (var f = 0; f < B.length; f++) {
+                if (B[f].checked) {
+                    A = true;
+                    break;
+                }
+            }
+            var Y = false;
+            var X = document.form.radio;
+            for (var i = 0; i < X.length; i++) {
+                if (X[i].checked) {
+                    Y = true;
+                    break;
+                }
+            }
+            var M = false;
+            var N = document.form.sinif;
+            for (var j = 0; j < N.length; j++) {
+                if (N[j].checked) {
+                    M = true;
+                    break;
+                }
+            }
+            if (document.getElementById('txt1').value == "") {
+                alert("Adınız  girin");
+                return false;
+            }
+
+
+            if (document.getElementById('email').value == "") {
+                alert("e-postınız girin");
+                return false;
+            }
+            if (document.getElementById('pas').value == "") {
+                alert(" Şifreniz Girin");
+                return false;
+            }
+            if (document.getElementById('fil').value == "") {
+                alert("Fotograf seç");
+                return false;
+            }
+            if (y == false) {
+                alert("Cinsyet Seçin");
+                return false;
+            }
+            if (m == false) {
+                alert("SINIFINIZIN Seçin");
+                return false;
+            }
+            if (document.getElementById('select').value == "-1") {
+                alert(" Şhriniz Seçin");
+                return false;
+            }
+
+            if (a == false) {
+                alert("dil sec");
+                return false;
+            } else {
+                return true;
+            }
+
+
+        }
+    </script>
+
+
+
+
+
+</body>
+
+</html>
